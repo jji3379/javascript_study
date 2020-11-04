@@ -20,10 +20,16 @@
             // 4. id가 inputName인 요소에 포커스 주기
             document.querySelector("#inputName").focus();
         }
-        function welcome(awe){
-            alert(awe+"님 환영합니다.");
+        //함수의 인자를 전달 받을 매개변수 arg 정의하기
+        function welcome(arg){
+            // arg 에는 함수를 호출하면서 전달한 값이 들어 있다.
+            alert(arg+"님 환영합니다.");
         }
 
+        //위와 같은 동작을 하는 함수를 아래와 같이 정의할 수도 있다.
+        var welcome2=function(arg){
+            alert(arg+"님 환영합니다.");
+        }
     </script>
 </body>
 </html>
