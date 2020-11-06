@@ -41,14 +41,14 @@
         // 1. 전체 div 수 확인 querySelectorAll(".box")
         // 2. 각각의 div에 인덱스 설정        빈 배열 생성, for() 인덱스 넣기
         // 3. 누른 인덱스의 div에 clicked 출력 addEventListener(click, function {this.})
-        let testDiv=[];
-        let boxnum=document.querySelectorAll(".box");
-            for(i=0; i<boxnum.length; i++){
-            testDiv.push(boxnum);     
-            document.querySelectorAll(".box")[i].addEventListener("click", function(){
+        (function(){
+            let boxnum=document.querySelectorAll(".box");
+            for(i=0; i<boxnum.length; i++){ 
+            boxnum[i].addEventListener("click", function(){
             this.innerText="clicked!";
-            })
-        };    
+            });
+        };  
+        })();  
     </script>
 </body>
 </html>
