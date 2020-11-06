@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener3.html</title>
+</head>
+<body>
+    <h1>key event 처리</h1>
+    <input type="text" id="inputMsg" placeholder="메세지 입력..."/>
+    <p id="result"></p>
+    <ul id="msgList">
+
+    </ul>
+    <script>
+        let msg=[];
+        document.querySelector("#inputMsg").addEventListener("keydown", function(){
+        if(event.keyCode==13){
+            let word=document.querySelector("#inputMsg").value;
+            document.querySelector("#result").innerText=word;
+            let makeli=document.createElement("li");
+            makeli.innerText=word;
+            document.querySelector("#msgList").append(makeli);    
+        };
+        });
+    </script>
+</body>
+</html>
