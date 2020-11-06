@@ -10,7 +10,8 @@
     <input type="text" id="inputName" placeholder="이름입력..."/>
     <button onclick="saveToArray();">배열에 저장하기</button><br/>
     <button onclick="printToConsole();">배열에 저장된 내용 콘솔에 순서대로 출력하기</button><br/>
-    <button onclick="printToList();">저장된 내용 ul 요소에 출력하기</button>
+    <button onclick="printToList1();">저장된 내용 ul 요소에 출력하기</button><br/>
+    <button onclick="printToList2();">저장된 내용 ul 요소에 출력하기2(forEach)</button>
     <h2>이름 목록입니다.</h2>
     <ul id="namelist">
 
@@ -35,6 +36,14 @@
             document.querySelector("#namelist").append(makeli);     
             }
         }
+
+        function printToList2(){
+            names.forEach(function(newname){ 
+            let makeli=document.createElement("li");
+            makeli.innerText=newname;
+            document.querySelector("#namelist").append(makeli);     
+        })
+    }
     </script>
 </body>
 </html>
